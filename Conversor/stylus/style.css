@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #E5E5E5;
+    --cor-secundaria: #0A3871;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+}
+
+.entrada_texto {
+    width: 21.5rem;
+    height: 27.5rem;
+    font-size: 1.25rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    align-items: flex-start;
+    border: 0px;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.saida_texto {
+    width: 21.5rem;
+    height: 27.5rem;
+    font-size: 1.25rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    align-items: flex-start;
+    border: 0px;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: auto;
+}
+
+.apresentacao__entrada {
+    padding: 1% 0 2% 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.entrada_texto_botoes {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.entrada_texto_botoes_limpar {
+    padding-top: 19rem;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 4px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
