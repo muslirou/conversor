@@ -3,23 +3,17 @@ function converterTextoLinkText () {
     let novoTexto = '';
     for (let index = 0; index < texto.length; index++) {
         i = texto[index];
-        
-        if (i == " " || i == "/" || i == '"' || i == "." || i == "(" || i == ")") {
-            i = "--";
+
+        if (i == "/" || i == '"' || i == "." || i == "(" || i == ")" || i == "," || i == "'" || i == "°" || i==";" || i=="+") {
+          i = "";
+        } else if (i == " ") {
+          i = "--";
         }
         novoTexto += i;
     }
     let campo = document.getElementById('texto_convertido')
     campo.innerHTML = novoTexto;
 }
-
-function copiarTexto() {
-    let copyText = document.querySelector("#texto_convertido");
-    copyText.select();
-    document.execCommand("copy");
-  }
-  
-  document.querySelector("#copy").addEventListener("click", copy);
 
   function converterTextoMinuscula () {
     let texto = String(document.getElementById('texto_converter').value).toLowerCase();
@@ -53,7 +47,17 @@ function copiarTexto() {
     campo.innerHTML = novoTexto;
   }
 
-  function  limparCampos() {
+  function limparCampos() {
+    let texto = "";
+    let saida = document.getElementById('texto_convertido');
+    saida.innerHTML = texto;
     document.getElementById('texto_converter').value = "";
-    document.getElementById('texto_convertido').value = "";
   }
+
+  function copiarTexto() {
+    let copyText = document.querySelector("#texto_convertido");
+    copyText.select();
+    document.execCommand("copy");
+  }
+  
+  document.querySelector("#copy").addEventListener("click", copy);

@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="./stylus/style.css">
   </head>
   <body>
-    <header>
-      <h1>Conversor de Texto</h1>
-      <br>
+    <header class="cabecalho">
+      <div>
+        <img src="./img/Screenshot_1.png" class="cabecario_imagem">
+        <h1>Conversor de Texto</h1>
+    </div>
     </header>
     <main class="apresentacao">
       <section class="apresentacao_entrada">
@@ -22,20 +24,21 @@
         <br>
       </section>
       <div class="entrada_texto_botoes">
-        <button onclick="converterTextoLinkText()">Converter para _LinkTexto</button>
-        <button onclick="converterTextoMinuscula()">Converter para minúscula</button>
-        <button onclick="converterTextoMaiuscula()">Converter para maiúscula</button>
-        <button onclick="retirarPipe()">Retirar pipe do texto</button>
-        <div class="entrada_texto_botoes_limpar">
-          <button onclick="limparCampos()">Limpar Campos</button>
-        </div>
+        <button onclick="converterTextoLinkText()" class="entrada_botoes"><strong>Converter para _LinkTexto</strong></button>
+        <button onclick="converterTextoMinuscula()" class="entrada_botoes"><strong>Converter para minúscula</strong></button>
+        <button onclick="converterTextoMaiuscula()" class="entrada_botoes"><strong>Converter para maiúscula</strong></button>
+        <button onclick="retirarPipe()" class="entrada_botoes"><strong>Retirar pipe do texto</strong></button>
+        <!-- <div class="entrada_texto_botoes_limpar">
+          <button onclick="limparCampos()" class="entrada_botoes">Limpar Campos</button>
+        </div> -->
       </div>
       <section class="apresentacao_saida">
         <div>
             <textarea type="text" class="saida_texto" id="texto_convertido"></textarea>
         </div>
       </div>
-      <button onclick="copiarTexto()" class="apresentacao_saida_copiar" id="copy">Copiar</button>                
+        <button onclick="copiarTexto()" class="apresentacao_saida_copiar" id="copy">Copiar</button>
+        <button onclick="limparCampos()" class="apresentacao_saida_limpar">Limpar</button>                
       </div>
       </section>
       <script src="./java/app.js" defer></script>
