@@ -1,13 +1,21 @@
+function recarregarPagina () {
+    window.location.reload();
+} 
+
 function converterTextoLinkText () {
     let texto = String(document.getElementById('texto_converter').value).toLowerCase();    
     let novoTexto = '';
     for (let index = 0; index < texto.length; index++) {
         i = texto[index];
 
-        if (i == "/" || i == '"' || i == "." || i == "(" || i == ")" || i == "," || i == "'" || i == "°" || i==";" || i=="+") {
+        if (i == "/" || i == '"' || i == "(" || i == ")" || 
+            i == "," || i == "'" || i == "°" || i == ";" || i == "+" || 
+            i == ":") {
           i = "";
         } else if (i == " ") {
           i = "--";
+        } else if (i == "x" || i == "." ) {
+          i = "-"
         }
         novoTexto += i;
     }
@@ -45,6 +53,22 @@ function converterTextoLinkText () {
     }
     let campo = document.getElementById('texto_convertido')
     campo.innerHTML = novoTexto;
+  }
+
+  function converterMetaTag () {
+    let texto = String(document.getElementById('texto_converter').value).toLowerCase();    
+    let novoTexto = '';
+    for (let index = 0; index < texto.length; index++) {
+        i = texto[index];
+
+        if (i == "-") {
+          i = " ";
+      }
+      novoTexto += i;
+  }
+  let campo = document.getElementById('texto_convertido')
+  campo.innerHTML = novoTexto;
+
   }
 
   function limparCampos() {
